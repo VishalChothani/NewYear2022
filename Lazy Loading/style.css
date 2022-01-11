@@ -34,6 +34,11 @@ body {
 }
 
 /* GENERAL ELEMENTS */
+.section {
+  padding: 15rem 3rem;
+  border-top: 1px solid #ddd;
+  transition: transform 1s, opacity 1s;
+}
 
 .btn {
   display: inline-block;
@@ -48,85 +53,68 @@ body {
   transition: all 0.3s;
 }
 
-/* TABS */
-.operations {
-  max-width: 100rem;
-  margin: 12rem auto 0 auto;
-  background-color: #fff;
+.btn:hover {
+  background-color: var(--color-primary-darker);
 }
 
-.operations__tab-container {
-  display: flex;
-  justify-content: center;
-}
-
-.operations__tab {
-  margin-right: 2.5rem;
-  transform: translateY(-50%);
-}
-
-.operations__tab span {
-  margin-right: 1rem;
-  font-weight: 600;
+.btn--text {
   display: inline-block;
-}
-
-.operations__tab--1 {
-  background-color: var(--color-secondary);
-}
-
-.operations__tab--1:hover {
-  background-color: var(--color-secondary-darker);
-}
-
-.operations__tab--3 {
-  background-color: var(--color-tertiary);
-  margin: 0;
-}
-
-.operations__tab--3:hover {
-  background-color: var(--color-tertiary-darker);
-}
-
-.operations__tab--active {
-  transform: translateY(-66%);
-}
-
-.operations__content {
-  display: none;
-
-  /* JUST PRESENTATIONAL */
+  background: none;
   font-size: 1.7rem;
-  padding: 2.5rem 7rem 6.5rem 7rem;
-}
-
-.operations__content--active {
-  display: grid;
-  grid-template-columns: 7rem 1fr;
-  column-gap: 3rem;
-  row-gap: 0.5rem;
-}
-
-.operations__header {
-  font-size: 2.25rem;
+  font-family: inherit;
   font-weight: 500;
-  align-self: center;
+  color: var(--color-primary);
+  border: none;
+  border-bottom: 1px solid currentColor;
+  padding-bottom: 2px;
+  cursor: pointer;
+  transition: all 0.3s;
 }
 
-.operations__icon {
+p {
+  color: #666;
+}
+
+/* Lazy loading */
+.lazy-img {
+  filter: blur(20px);
+}
+.features {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  margin: 0 12rem;
+}
+
+.features__img {
+  width: 100%;
+}
+
+.features__feature {
+  align-self: center;
+  justify-self: center;
+  width: 70%;
+  font-size: 1.5rem;
+}
+
+.features__icon {
   display: flex;
   align-items: center;
   justify-content: center;
-  height: 7rem;
-  width: 7rem;
+  background-color: var(--color-primary-opacity);
+  height: 5.5rem;
+  width: 5.5rem;
   border-radius: 50%;
+  margin-bottom: 2rem;
 }
 
-.operations__icon svg {
-  height: 2.75rem;
-  width: 2.75rem;
+.features__icon svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  fill: var(--color-primary);
 }
 
-.operations__content p {
-  grid-column: 2;
+.features__header {
+  font-size: 2rem;
+  margin-bottom: 1rem;
 }

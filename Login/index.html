@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+
+    <title>Login</title>
+    <script defer src="login.js"></script>
+  </head>
+  <body>
+    <div class="section">
+      <div class="modal">
+        <form class="form text-center">
+          <h4>Log In</h4>
+          <div class="error">
+            <h4 class="mismatch hidden">Username/password doesn't match.</h4>
+            <h4 class="blank hidden">Field's cannot be blank.</h4>
+            <h4 class="wrong-pass hidden">Password is not strong.</h4>
+            <h4 class="wrong-email hidden">Invalid email.</h4>
+          </div>
+          <div class="success hidden">
+            <h4>Congrats</h4>
+          </div>
+          <input
+            type="email"
+            name="login-email"
+            class="form-style login-email"
+            placeholder="Your Email"
+            id="login-email"
+            autocomplete="off"
+          />
+          <input
+            type="password"
+            name="login-pass"
+            class="form-style login-pass"
+            placeholder="Your Password"
+            id="login-pass"
+            autocomplete="off"
+          />
+
+          <button type="submit" class="btn btn-submit">Submit</button>
+        </form>
+      </div>
+      <div class="overlay"></div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,129 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: 40% 1fr;
+  grid-template-rows: 50px;
+  height: 100vh;
+  column-gap: 30px;
+  row-gap: 20px;
+}
+
+header {
+  text-align: center;
+  grid-column: 1/-1;
+}
+
+aside,
+main {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 0 20px;
+}
+
+input[type="text"] {
+  display: inline-block;
+  border: 1px solid black;
+  box-shadow: none;
+  border: 0;
+  width: 100%;
+  border-radius: 4px;
+  padding: 12px 20px;
+  grid-column: 1 / -1;
+  font-size: 18px;
+}
+
+.btn {
+  text-align: center;
+  font-size: 16px;
+  padding: 7px 15px;
+  background-color: rgb(154, 68, 239);
+  color: rgb(255, 255, 255);
+  border: 0.1rem solid rgb(154, 68, 239);
+  margin-left: auto;
+  cursor: pointer;
+}
+
+.color-btn {
+  width: 30px;
+  height: 30px;
+  border: 1px solid black;
+  cursor: pointer;
+}
+.colors {
+  display: flex;
+  gap: 15px;
+  align-items: center;
+  margin: 15px 0;
+}
+.red {
+  background-color: red;
+}
+.yellow {
+  background-color: yellow;
+}
+.green {
+  background-color: green;
+}
+.blue {
+  background-color: lightskyblue;
+}
+
+ul {
+  list-style: none;
+}
+
+ul li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 20px;
+  cursor: pointer;
+  color: black;
+}
+
+h1 {
+  font-size: 36px;
+}
+
+h3 {
+  font-size: 24px;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.error {
+  border: 5px solid red;
+  color: red;
+  text-align: center;
+  width: 40%;
+  margin: 10px auto;
+}
+
+.hidden {
+  display: none;
+}
+
+.strike {
+  text-decoration: line-through;
+}

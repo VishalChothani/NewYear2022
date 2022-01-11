@@ -1,0 +1,65 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+nav .nav-bar {
+  display: flex;
+  gap: 30px;
+  font-size: 24px;
+  padding: 0 50px;
+  background-color: bisque;
+}
+
+.nav-bar li:first-child {
+  margin-right: auto;
+}
+
+nav ul {
+  list-style: none;
+}
+
+.relative {
+  position: relative;
+}
+
+.news-sub {
+  display: none;
+  position: absolute;
+  background-color: darkseagreen;
+  right: 30px;
+  border: 1px solid black;
+}
+
+.news-sub li {
+  padding: 0 10px;
+}
+
+.news:hover {
+  color: red;
+}
+
+.news:hover .news-sub {
+  display: flex;
+  flex-direction: column;
+}
+
+a:link {
+  text-decoration: none;
+  color: #444;
+}

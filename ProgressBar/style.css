@@ -1,0 +1,85 @@
+/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
+
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  position: relative;
+}
+
+/* GENERAL ELEMENTS */
+
+.btn {
+  display: inline-block;
+  background-color: var(--color-primary);
+  font-size: 1.6rem;
+  font-family: inherit;
+  font-weight: 500;
+  border: none;
+  padding: 1.25rem 4.5rem;
+  border-radius: 10rem;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.buttons {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section--1 {
+  margin: 20px auto;
+  background-color: cadetblue;
+  width: 70%;
+  padding: 40px 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.progress {
+  background: #d0d6d8;
+  height: 40px;
+  position: relative;
+  width: 300px;
+  margin-bottom: 20px;
+}
+.progress-css,
+.progress-js {
+  background: #488878;
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 0;
+}
+
+.progress-css.complete {
+  transition: 3s width linear;
+  width: 100%;
+}

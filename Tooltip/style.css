@@ -1,0 +1,56 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+  position: relative;
+  max-width: 1200px;
+  margin: 20px auto;
+  font-size: 20px;
+}
+
+.tooltip-container {
+  margin-top: 250px;
+  cursor: pointer;
+  position: relative;
+  display: inline-block;
+}
+
+.tooltip-container:hover .tooltip {
+  display: inline;
+}
+
+.tooltip {
+  display: none;
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  border: 1px solid;
+  top: -47px;
+  left: 0;
+  background-color: black;
+  color: white;
+  border-radius: 15px;
+}
+
+.tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border: 8px solid;
+  border-color: black transparent transparent transparent;
+}

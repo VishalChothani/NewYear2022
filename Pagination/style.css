@@ -1,0 +1,101 @@
+/* The page is NOT responsive. You can implement responsiveness yourself if you wanna have some fun 😃 */
+
+:root {
+  --color-primary: #5ec576;
+  --color-secondary: #ffcb03;
+  --color-tertiary: #ff585f;
+  --color-primary-darker: #4bbb7d;
+  --color-secondary-darker: #ffbb00;
+  --color-tertiary-darker: #fd424b;
+  --color-primary-opacity: #5ec5763a;
+  --color-secondary-opacity: #ffcd0331;
+  --color-tertiary-opacity: #ff58602d;
+  --gradient-primary: linear-gradient(to top left, #39b385, #9be15d);
+  --gradient-secondary: linear-gradient(to top left, #ffb003, #ffcb03);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html {
+  font-size: 62.5%;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  font-weight: 300;
+  color: #444;
+  line-height: 1.9;
+  background-color: #f3f3f3;
+}
+
+/* Pagination */
+.section {
+  max-width: 80rem;
+  margin: 0 auto;
+  position: relative;
+  background-color: white;
+  box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25);
+  font-size: 20px;
+  padding: 20px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin-top: 40px;
+  gap: 30px;
+}
+
+.page {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: seagreen;
+  text-decoration: none;
+}
+
+.page.active {
+  background-color: seagreen;
+  color: white;
+}
+
+a:hover {
+  background-color: seagreen;
+  color: white;
+  cursor: pointer;
+}
+
+.arrow {
+  text-decoration: none;
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  border: 1px solid seagreen;
+  color: seagreen;
+  /* box-shadow: 0 20px 20px rgba(0, 0, 0, 0.25); */
+  background-color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.arrow-left {
+  top: 50%;
+  left: 10%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow-right {
+  top: 50%;
+  right: 10%;
+  transform: translate(50%, -50%);
+}

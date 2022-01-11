@@ -1,25 +1,23 @@
-let dotsContainer = document.querySelector('.dots');
-let slides = document.querySelectorAll('.slide');
-let arrRight = document.querySelector('.slider__btn--right');
-let arrLeft = document.querySelector('.slider__btn--left');
+let dotsContainer = document.querySelector(".dots");
+let slides = document.querySelectorAll(".slide");
+let arrRight = document.querySelector(".slider__btn--right");
+let arrLeft = document.querySelector(".slider__btn--left");
 
 let currentSlide = 0;
 let totalSlide = slides.length;
 
-const goToSlide = slide => {
+const goToSlide = (slide) => {
   slides.forEach((s, i) => {
     s.style.transform = `translateX(${(i - slide) * 100}%)`;
   });
 };
 
-const selectDot = slide => {
-  const dots = document.querySelectorAll('.dots__dot');
+const selectDot = (slide) => {
+  const dots = document.querySelectorAll(".dots__dot");
   dots.forEach((element, i) => {
-    element.classList.remove('dots__dot--active');
+    element.classList.remove("dots__dot--active");
   });
-  document
-    .querySelector(`.dots__dot[data-slide="${slide}"]`)
-    .classList.add('dots__dot--active');
+  document.querySelector(`.dots__dot[data-slide="${slide}"]`).classList.add("dots__dot--active");
 };
 
 const moveSlides = (isRight = false) => {
@@ -46,23 +44,20 @@ const createDots = () => {
   });
 
   slides.forEach((s, i) => {
-    dotsContainer.insertAdjacentHTML(
-      'beforeend',
-      `<button class='dots__dot' data-slide=${i}></button>`
-    );
+    dotsContainer.insertAdjacentHTML("beforeend", `<button class='dots__dot' data-slide=${i}></button>`);
   });
 };
 
-arrRight.addEventListener('click', e => {
+arrRight.addEventListener("click", (e) => {
   moveSlides(true);
 });
 
-arrLeft.addEventListener('click', e => {
+arrLeft.addEventListener("click", (e) => {
   moveSlides(false);
 });
 
-dotsContainer.addEventListener('click', e => {
-  if (e.target.classList.contains('dots__dot')) {
+dotsContainer.addEventListener("click", (e) => {
+  if (e.target.classList.contains("dots__dot")) {
     const slide = e.target.dataset.slide;
     goToSlide(slide);
     selectDot(slide);

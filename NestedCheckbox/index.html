@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Nested Checkbox</title>
+
+    <script defer src="checkBox.js"></script>
+  </head>
+  <body>
+    <!-- 1 depth -->
+    <!-- <main class="container">
+      <label for="option"><input type="checkbox" id="option" /> Electronics</label>
+      <div class="inner-option">
+        <label><input type="checkbox" class="subOption" /> Laptops</label>
+        <label><input type="checkbox" class="subOption" /> TVs</label>
+        <label><input type="checkbox" class="subOption" /> Microphones</label>
+      </div>
+    </main> -->
+
+    <!-- NESTED DEPTH -->
+    <section class="container">
+      <ul>
+        <li>
+          <input type="checkbox" name="food" id="food" />
+          <label for="food">Food</label>
+          <ul>
+            <li>
+              <input type="checkbox" name="food-1" id="food-1" />
+              <label for="food-1">Indian</label>
+            </li>
+            <li>
+              <input type="checkbox" name="food-2" id="food-2" />
+              <label for="food-2">Thai</label>
+
+              <ul>
+                <li>
+                  <input type="checkbox" name="food-2-1" id="food-2-1" />
+                  <label for="food-2-1">Ramen</label>
+                </li>
+                <li>
+                  <input type="checkbox" name="food-2-2" id="food-2-2" />
+                  <label for="food-2-2">Sushi</label>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <input type="checkbox" name="food-3" id="food-3" />
+              <label for="food-3">Mexican</label>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+  </body>
+</html>

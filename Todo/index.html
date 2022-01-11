@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" href="style.css" />
+    <title>To Do</title>
+    <script defer src="todo.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <h1>To Do List</h1>
+      </header>
+
+      <aside>
+        <h3>List</h3>
+        <div class="to-do-list">
+          <ul class="user-list"></ul>
+        </div>
+      </aside>
+      <main>
+        <h3>Operation</h3>
+        <form>
+          <div class="error hidden">Task cannot be blank</div>
+          <input type="text" class="task" id="task" name="task" placeholder="Task" />
+          <div class="colors">
+            <button class="color-btn red" data-color="red"></button>
+            <button class="color-btn yellow" data-color="yellow"></button>
+            <button class="color-btn green" data-color="green"></button>
+            <button class="color-btn blue" data-color="blue"></button>
+            <button class="btn add-btn" type="submit">Add</button>
+          </div>
+        </form>
+      </main>
+    </div>
+  </body>
+</html>
